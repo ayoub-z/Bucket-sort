@@ -25,7 +25,7 @@ void Bucket_sort::distribution_pass(int digit_pos, string number){
 	int length_neg_array = negative_array.size();
 
 	if (number == "negative"){ // if we're working with negative numbers
-		for (int i=0; i<negative_array.size(); i++) {
+		for (int i=0; i<length_neg_array; i++) {
 			float n = negative_array[array_index] * -1; // convert it to positive number
 			int index = int(n / digit_position * 10) % digit_pos; // index becomes nth digit. so digit 3 for 124.5 = 1
 			if (get_digits(n) == digit_pos){ 
