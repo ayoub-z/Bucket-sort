@@ -6,17 +6,16 @@ using std::vector, std::string;
 
 class Bucket_sort{
 	private:
-		vector<int> bucket[10];
-		vector<int> array;
+		vector<float> bucket[10];
+		vector<float> array;
+		vector<float> negative_array;
 		int size;
 
-
 	public:
-		Bucket_sort(vector<int> array, int n);
-		void distribution_pass(int digit_pos);
+		Bucket_sort(vector<float> array, int n);
+		void distribution_pass(int digit_pos, string number);
 		void sort();
 		int get_digits(int number);
-		void gathering_pass(int digit_pos);
-		void fill_array();
+		void gathering_pass(string number);
 		void to_string();
 };

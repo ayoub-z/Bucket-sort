@@ -10,18 +10,19 @@ using namespace std::chrono;
 
 int main(){
 
-	int tests = 6;
+	int tests = 10;
 	int n = 1000;
 	for (int test = 1; test < tests +1; test++){
-		cout << "Test: " << test << endl;
-		cout << "Vector size: " << n << endl;
 
 		auto start = high_resolution_clock::now();
 
 		std::srand(unsigned(std::time(nullptr)));
-		std::vector<int> arr(n);
+		std::vector<float> arr(n);
 		std::generate(arr.begin(), arr.end(), std::rand);
 
+		cout << "Test: " << test << endl;
+		cout << "Vector size: " << arr.size() << endl << endl;
+							
 		Bucket_sort b1(arr, arr.size());
 		b1.sort();
 
@@ -29,10 +30,7 @@ int main(){
 		microseconds duration = duration_cast<microseconds>(stop - start);
 
 		cout << "Total runtime: " << duration.count() << " microseconds\n" << endl;
-
-		n *= 2;
 		arr.clear();
+		n *= 2;
 		}
 }
-
-
