@@ -39,6 +39,7 @@ void Bucket_sort::distribution_pass(int digit_amount, bool number_type, vector<f
             else{
                 array.erase(array.begin() + array_index);
             }
+			current_array.erase(current_array.begin() + array_index);
         }
         else{
             array_index++;
