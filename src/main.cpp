@@ -9,7 +9,6 @@ using std::cout, std::endl;
 using namespace std::chrono;
 
 int main(){
-
 	int tests = 10;
 	int n = 1000;
 	for (int test = 1; test < tests +1; test++){
@@ -22,14 +21,14 @@ int main(){
 
 		cout << "Test: " << test << endl;
 		cout << "Vector size: " << arr.size() << endl << endl;
-							
+
 		Bucket_sort b1(arr, arr.size());
 		b1.sort();
 
 		auto stop = high_resolution_clock::now();
-		microseconds duration = duration_cast<microseconds>(stop - start);
+		milliseconds duration = duration_cast<milliseconds>(stop - start);
 
-		cout << "Total runtime: " << duration.count() << " microseconds\n" << endl;
+		cout << "Total runtime: " << duration.count() << " milliseconds\n" << endl;
 		arr.clear();
 		n *= 2;
 		}

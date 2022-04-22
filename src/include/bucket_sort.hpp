@@ -13,9 +13,9 @@ class Bucket_sort{
 
 	public:
 		Bucket_sort(vector<float> array, int n);
-		void distribution_pass(int digit_pos, string number);
+		void distribution_pass(int digit_pos, bool number_type, vector<float> array);
 		void sort();
 		int get_digits(int number);
-		void gathering_pass(string number);
+		void gathering_pass(bool number_type);
 		void to_string();
 };
